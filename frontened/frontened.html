@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stegjava: hides message into the image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Image Steganography Tool</h2>
+
+    <div id="first">
+        <p>Enter both the image and text and see how it converts into a different form.</p>
+
+        <form id="hide-form">
+            <label>PNG image
+                <input type="file" name="image" accept="image/png" required>
+            </label>
+
+            <label>Secret message
+                <textarea name="message" rows="4" required></textarea>
+            </label>
+
+            <label>Password
+                <input type="password" name="password" autocomplete="new-password" required>
+            </label>
+
+            <button type="submit">Hide message</button>
+            <p id="hide-status" role="status"></p>
+        </form>
+
+        <div id="hide-result" hidden>
+            <img id="hide-preview" alt="Image with the hidden message" width="300">
+            <br>
+            <a id="hide-download" href="#" download="stego.png">Download stego.png</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
